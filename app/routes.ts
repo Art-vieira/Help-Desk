@@ -1,3 +1,12 @@
-import { type RouteConfig, index } from "@react-router/dev/routes";
+import { RouteObject } from "react-router-dom";
+import Login from "./login/Login";
+import Home from "./routes/home";
 
-export default [index("routes/home.tsx")] satisfies RouteConfig;
+// Rotas principais do app
+const routes: RouteObject[] = [
+  { path: "/", element: <Login /> },
+  { path: "/login", element: <Login /> },
+  { path: "/home", element: <Home /> },
+];
+
+export default routes;
